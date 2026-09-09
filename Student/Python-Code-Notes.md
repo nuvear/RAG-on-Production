@@ -134,7 +134,73 @@ We ingest ten small text records. PDF parsing and external uploads are outside t
 
 
 ```python
-DOCUMENTS = [{'doc_id': 'D01', 'title': 'Borrowing period', 'status': 'current', 'text': 'Undergraduate students may borrow library books for 21 days. Each student may borrow up to five books at a time. Borrowing requires a valid student card. The loan period begins on the day a book is checked out at the library desk.'}, {'doc_id': 'D02', 'title': 'Renewal', 'status': 'current', 'text': 'Students may renew a borrowed book once for an additional 14 days. Renewal is unavailable when another reader has reserved the book. Students can request renewal through the library portal before the due date. A renewal does not remove an existing overdue charge.'}, {'doc_id': 'D03', 'title': 'Book renewal archive', 'status': 'archived', 'text': 'Students may renew a borrowed book for 30 days. This archived renewal policy was replaced by the current Renewal policy. The archive is retained for historical reference. It must not be used to answer questions about current borrowing or renewal rules.'}, {'doc_id': 'D04', 'title': 'Quiet study rooms', 'status': 'current', 'text': 'Students can book quiet study rooms through the library portal. Each booking lasts up to two hours. Groups must arrive within ten minutes of the start time or the booking is released. Food is prohibited inside the study rooms.'}, {'doc_id': 'D05', 'title': 'Library opening hours', 'status': 'current', 'text': 'The library opens at 8 am and closes at 8 pm on weekdays. On Saturday the library opens at 10 am and closes at 4 pm. The library is closed on Sunday. Holiday hours are published separately and are not included in this handbook.'}, {'doc_id': 'D06', 'title': 'Overdue books', 'status': 'current', 'text': 'The overdue charge for a library book is 2 credits per day. Charges stop accumulating after 20 credits per book. Students must return overdue books before borrowing additional books. Staff can review a disputed charge at the library service desk.'}, {'doc_id': 'D07', 'title': 'Laptop loans', 'status': 'current', 'text': 'Students may borrow a library laptop for four hours. Laptops must stay inside the library building. Students return laptops to the technology desk before closing time. Laptop loans require a student card and are separate from the five-book borrowing limit.'}, {'doc_id': 'D08', 'title': 'Remote journal access', 'status': 'current', 'text': 'Students access electronic journals from home by signing in through the university single sign-on service. An active student account is required. The library portal links to the journal catalogue. Students should contact the help desk when authentication fails.'}, {'doc_id': 'D09', 'title': 'Printing', 'status': 'current', 'text': 'Black-and-white printing costs 1 credit per page. Colour printing costs 3 credits per page. Students pay with their campus print balance. The printing service is located beside the technology desk. Printing refunds require a staff review of the failed print job.'}, {'doc_id': 'D10', 'title': 'Lost student card', 'status': 'current', 'text': 'Students who lose a student card should report the loss to campus security. Security disables the lost card. The student services office issues a replacement card. The library does not issue replacement student cards. Bring an alternative identity document when requesting a replacement.'}]
+DOCUMENTS = [{'doc_id': 'D01',
+  'title': 'Borrowing period',
+  'status': 'current',
+  'text': 'Undergraduate students may borrow library books for 21 days. Each student may '
+          'borrow up to five books at a time. Borrowing requires a valid student card. The '
+          'loan period begins on the day a book is checked out at the library desk.'},
+ {'doc_id': 'D02',
+  'title': 'Renewal',
+  'status': 'current',
+  'text': 'Students may renew a borrowed book once for an additional 14 days. Renewal is '
+          'unavailable when another reader has reserved the book. Students can request '
+          'renewal through the library portal before the due date. A renewal does not '
+          'remove an existing overdue charge.'},
+ {'doc_id': 'D03',
+  'title': 'Book renewal archive',
+  'status': 'archived',
+  'text': 'Students may renew a borrowed book for 30 days. This archived renewal policy '
+          'was replaced by the current Renewal policy. The archive is retained for '
+          'historical reference. It must not be used to answer questions about current '
+          'borrowing or renewal rules.'},
+ {'doc_id': 'D04',
+  'title': 'Quiet study rooms',
+  'status': 'current',
+  'text': 'Students can book quiet study rooms through the library portal. Each booking '
+          'lasts up to two hours. Groups must arrive within ten minutes of the start time '
+          'or the booking is released. Food is prohibited inside the study rooms.'},
+ {'doc_id': 'D05',
+  'title': 'Library opening hours',
+  'status': 'current',
+  'text': 'The library opens at 8 am and closes at 8 pm on weekdays. On Saturday the '
+          'library opens at 10 am and closes at 4 pm. The library is closed on Sunday. '
+          'Holiday hours are published separately and are not included in this handbook.'},
+ {'doc_id': 'D06',
+  'title': 'Overdue books',
+  'status': 'current',
+  'text': 'The overdue charge for a library book is 2 credits per day. Charges stop '
+          'accumulating after 20 credits per book. Students must return overdue books '
+          'before borrowing additional books. Staff can review a disputed charge at the '
+          'library service desk.'},
+ {'doc_id': 'D07',
+  'title': 'Laptop loans',
+  'status': 'current',
+  'text': 'Students may borrow a library laptop for four hours. Laptops must stay inside '
+          'the library building. Students return laptops to the technology desk before '
+          'closing time. Laptop loans require a student card and are separate from the '
+          'five-book borrowing limit.'},
+ {'doc_id': 'D08',
+  'title': 'Remote journal access',
+  'status': 'current',
+  'text': 'Students access electronic journals from home by signing in through the '
+          'university single sign-on service. An active student account is required. The '
+          'library portal links to the journal catalogue. Students should contact the help '
+          'desk when authentication fails.'},
+ {'doc_id': 'D09',
+  'title': 'Printing',
+  'status': 'current',
+  'text': 'Black-and-white printing costs 1 credit per page. Colour printing costs 3 '
+          'credits per page. Students pay with their campus print balance. The printing '
+          'service is located beside the technology desk. Printing refunds require a staff '
+          'review of the failed print job.'},
+ {'doc_id': 'D10',
+  'title': 'Lost student card',
+  'status': 'current',
+  'text': 'Students who lose a student card should report the loss to campus security. '
+          'Security disables the lost card. The student services office issues a '
+          'replacement card. The library does not issue replacement student cards. Bring '
+          'an alternative identity document when requesting a replacement.'}]
 assert len(DOCUMENTS) == 10
 print('Documents:', len(DOCUMENTS))
 for d in DOCUMENTS:
@@ -414,7 +480,12 @@ These are macro averages across questions. An unsupported question has no gold d
 
 
 ```python
-EVAL_SET = [{'question': 'How long can an undergraduate keep borrowed books?', 'gold': ['D01']}, {'question': 'How can I extend my book loan?', 'gold': ['D02']}, {'question': 'How long can I reserve a quiet study room?', 'gold': ['D04']}, {'question': 'When does the library close on Saturday?', 'gold': ['D05']}, {'question': 'What is the daily charge for an overdue book?', 'gold': ['D06']}, {'question': 'How can I read electronic journals from home?', 'gold': ['D08']}]
+EVAL_SET = [{'question': 'How long can an undergraduate keep borrowed books?', 'gold': ['D01']},
+ {'question': 'How can I extend my book loan?', 'gold': ['D02']},
+ {'question': 'How long can I reserve a quiet study room?', 'gold': ['D04']},
+ {'question': 'When does the library close on Saturday?', 'gold': ['D05']},
+ {'question': 'What is the daily charge for an overdue book?', 'gold': ['D06']},
+ {'question': 'How can I read electronic journals from home?', 'gold': ['D08']}]
 def retrieval_metrics(retrieved, gold, k):
     if not gold: raise ValueError('Evaluate unsupported questions separately.')
     if len(retrieved) < k or len(set(retrieved[:k])) < k:
