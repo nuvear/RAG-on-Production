@@ -1,0 +1,14 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+*.pem
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+# Student submissions and local rehearsal artifacts
+rag_workshop_report.json
+*executed*.ipynb
+validation-private/
