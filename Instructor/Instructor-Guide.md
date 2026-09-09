@@ -2,6 +2,8 @@
 
 Teach with `RAG-2h-Labs.pptx` and the student notebook side by side. The audience is intermediate-to-expert in Python. The learning challenge is interpreting RAG behavior and designing tests. Detailed explanations are already present beside the code and in `Student/Python-Code-Notes.md`.
 
+Use the [guided student Colab edition](../Student/RAG_2h_Hands_On_Workbook.ipynb) for the class. It adds the [step-by-step workbook](../Student/Hands-On-Workbook.md), including concept explanations, numbered procedures and observation tables, around the same tested code. Students should record worksheet evidence in text cells and complete the existing reflection fields for JSON export. The compact student and instructor notebooks remain available as implementation references.
+
 ## Before class
 
 **One day before:** send the repository link, ask students to check their Google/Colab access and funded OpenAI project, and assign the setup and Python notes as optional pre-reading. Each student should create a Colab Secret called `OPENAI_API_KEY` and enable notebook access. Confirm access to both configured model IDs. Do not distribute a shared key in the repository or slides.

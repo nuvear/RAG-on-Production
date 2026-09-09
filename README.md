@@ -2,12 +2,12 @@
 
 Four hands-on labs for intermediate-to-expert Python programmers. Use OpenAI embeddings and generation to build a small evidence-grounded assistant, then test retrieval and guardrails.
 
-[![Open student workbook in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nuvear/RAG-on-Production/blob/main/Student/RAG_2h_Student.ipynb)
+[![Open student workbook in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nuvear/RAG-on-Production/blob/main/Student/RAG_2h_Hands_On_Workbook.ipynb)
 
 ## Start here
 
 1. **Instructor:** read [Instructor-Guide.md](Instructor/Instructor-Guide.md), then use [the PowerPoint](Instructor/RAG-2h-Labs.pptx).
-2. **Students:** open the Colab workbook above, save your own copy and configure `OPENAI_API_KEY` in Colab Secrets. The code explains itself in text cells and in the [detailed Python notes](Student/Python-Code-Notes.md).
+2. **Students:** open the guided Colab workbook above, save your own copy and configure `OPENAI_API_KEY` in Colab Secrets. Follow the [step-by-step hands-on workbook](Student/Hands-On-Workbook.md) for concepts, numbered procedures, observation tables and submission instructions. The [detailed Python notes](Student/Python-Code-Notes.md) explain the implementation.
 3. **Course designer:** read the [nine-chapter review and lab selection](Instructor/Chapter-Selection.md).
 
 | Clock | Session | Student output |
@@ -30,7 +30,8 @@ API usage is paid. The workbook limits attempted calls to 40 per kernel state an
 
 ## Materials
 
-- [Student workbook](Student/RAG_2h_Student.ipynb) and [detailed Python notes](Student/Python-Code-Notes.md).
+- [Step-by-step hands-on workbook](Student/Hands-On-Workbook.md) and its [guided Colab edition](Student/RAG_2h_Hands_On_Workbook.ipynb).
+- [Original compact student notebook](Student/RAG_2h_Student.ipynb) and [detailed Python notes](Student/Python-Code-Notes.md). The guided edition retains exactly the same executable cells.
 - [Instructor workbook](Instructor/RAG_2h_Instructor.ipynb), [facilitation guide](Instructor/Instructor-Guide.md) and [PowerPoint](Instructor/RAG-2h-Labs.pptx).
 - [Original fictional library data](Student/library_corpus.json), also embedded in each notebook.
 - [Recorded live example](Instructor/Recorded-Example-Run.md) for instructor comparison.
@@ -43,6 +44,8 @@ Current-policy filtering, input length checks, instructions separating evidence 
 ## Local use and checks
 
 Create a Python 3.11+ virtual environment and install `requirements.txt`. Set `OPENAI_API_KEY` in your shell, then open the notebook in Jupyter. The notebooks do not read a repository `.env` file. Run `python scripts/check_notebooks.py` for offline syntax, guardrail and metric checks. It makes no API calls. Local package installation and API execution are separate from the Colab UI rehearsal described in the instructor guide.
+
+To revise the guided edition, edit `Student/Hands-On-Workbook.md`, run `python scripts/build_hands_on_workbook.py`, then run the offline checks. The builder preserves the compact student notebook as the executable source of truth.
 
 ## Source scope
 

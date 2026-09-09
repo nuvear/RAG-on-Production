@@ -6,7 +6,13 @@ import json
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-notebooks = [ROOT/'Student/RAG_2h_Student.ipynb', ROOT/'Instructor/RAG_2h_Instructor.ipynb']
+notebooks = [ROOT/'Student/RAG_2h_Student.ipynb', ROOT/'Instructor/RAG_2h_Instructor.ipynb',
+             ROOT/'Student/RAG_2h_Hands_On_Workbook.ipynb']
+compact = json.loads(notebooks[0].read_text())
+guided = json.loads(notebooks[2].read_text())
+assert [''.join(c['source']) for c in compact['cells'] if c['cell_type']=='code'] == [
+    ''.join(c['source']) for c in guided['cells'] if c['cell_type']=='code'
+], 'Guided edition must preserve the tested executable cells.'
 functions = {}
 for path in notebooks:
     nb = json.loads(path.read_text())
