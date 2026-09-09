@@ -22,6 +22,16 @@ Four hands-on labs for intermediate-to-expert Python programmers. Use OpenAI emb
 
 One notebook contains all four labs. This preserves the corpus, embeddings, cache and experiment state in one runtime. Use the table of contents to navigate. The instructor workbook contains reference interpretations and is publicly accessible in this teaching repository; it is not intended as a secure exam answer key.
 
+## Student workbook languages
+
+| Language | Step-by-step workbook | Executable Colab | Detailed Python notes |
+|---|---|---|---|
+| English | [Workbook](Student/Hands-On-Workbook.md) | [Open in Colab](https://colab.research.google.com/github/nuvear/RAG-on-Production/blob/main/Student/RAG_2h_Hands_On_Workbook.ipynb) | [Python notes](Student/Python-Code-Notes.md) |
+| 日本語 | [ハンズオンワークブック](Student/ja/Hands-On-Workbook-JA.md) | [Colabで開く](https://colab.research.google.com/github/nuvear/RAG-on-Production/blob/main/Student/ja/RAG_2h_Hands_On_Workbook_JA.ipynb) | [Python解説](Student/ja/Python-Code-Notes-JA.md) |
+| 简体中文 | [实操手册](Student/zh-CN/Hands-On-Workbook-ZH-CN.md) | [在Colab中打开](https://colab.research.google.com/github/nuvear/RAG-on-Production/blob/main/Student/zh-CN/RAG_2h_Hands_On_Workbook_ZH_CN.ipynb) | [Python代码说明](Student/zh-CN/Python-Code-Notes-ZH-CN.md) |
+
+Japanese and Simplified Chinese editions include concepts, numbered procedures, observation tables, troubleshooting, assessment, and detailed function explanations. Technical terms include English in brackets. Executable code, comments, corpus text and test inputs stay in English and are identical across languages; students may write their reflections in their preferred language. The English materials and instructor presentation remain available unchanged.
+
 ## Requirements
 
 Use a Google account, free Colab Python 3 CPU runtime, internet access and a funded OpenAI API key. The models are `text-embedding-3-small` and `gpt-4.1-mini`. The project must allow both models. No GPU, database server, model download or Drive mount is required.
@@ -46,6 +56,8 @@ Current-policy filtering, input length checks, instructions separating evidence 
 Create a Python 3.11+ virtual environment and install `requirements.txt`. Set `OPENAI_API_KEY` in your shell, then open the notebook in Jupyter. The notebooks do not read a repository `.env` file. Run `python scripts/check_notebooks.py` for offline syntax, guardrail and metric checks. It makes no API calls. Local package installation and API execution are separate from the Colab UI rehearsal described in the instructor guide.
 
 To revise the guided edition, edit `Student/Hands-On-Workbook.md`, run `python scripts/build_hands_on_workbook.py`, then run the offline checks. The builder preserves the compact student notebook as the executable source of truth.
+
+For localized editions, edit their Markdown workbooks and `scripts/localization/ja.json` or `zh-CN.json`, then run `python scripts/build_localized_workbooks.py`. This regenerates the localized Colab notebooks and Python notes. The offline checks also require identical executable cells across languages.
 
 ## Source scope
 

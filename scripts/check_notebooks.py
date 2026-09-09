@@ -7,12 +7,19 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 notebooks = [ROOT/'Student/RAG_2h_Student.ipynb', ROOT/'Instructor/RAG_2h_Instructor.ipynb',
-             ROOT/'Student/RAG_2h_Hands_On_Workbook.ipynb']
+             ROOT/'Student/RAG_2h_Hands_On_Workbook.ipynb',
+             ROOT/'Student/ja/RAG_2h_Hands_On_Workbook_JA.ipynb',
+             ROOT/'Student/zh-CN/RAG_2h_Hands_On_Workbook_ZH_CN.ipynb']
 compact = json.loads(notebooks[0].read_text())
 guided = json.loads(notebooks[2].read_text())
 assert [''.join(c['source']) for c in compact['cells'] if c['cell_type']=='code'] == [
     ''.join(c['source']) for c in guided['cells'] if c['cell_type']=='code'
 ], 'Guided edition must preserve the tested executable cells.'
+for localized_path in notebooks[3:]:
+    localized = json.loads(localized_path.read_text())
+    assert [''.join(c['source']) for c in compact['cells'] if c['cell_type']=='code'] == [
+        ''.join(c['source']) for c in localized['cells'] if c['cell_type']=='code'
+    ], f'Localized code differs: {localized_path}'
 functions = {}
 for path in notebooks:
     nb = json.loads(path.read_text())
