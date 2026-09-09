@@ -12,3 +12,5 @@ __pycache__/
 rag_workshop_report.json
 *executed*.ipynb
 validation-private/
+session2_resources.json
+rag_session2_report.json

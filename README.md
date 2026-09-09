@@ -2,6 +2,8 @@
 
 Four hands-on labs for intermediate-to-expert Python programmers. Use OpenAI embeddings and generation to build a small evidence-grounded assistant, then test retrieval and guardrails.
 
+**Next session:** [Session 2 — Labs 5–8](Session-2/README.md) covers a RAG platform, AI agents, multimodal RAG and knowledge graphs, with English, Japanese and Simplified Chinese Colab workbooks and an instructor PowerPoint.
+
 [![Open student workbook in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nuvear/RAG-on-Production/blob/main/Student/RAG_2h_Hands_On_Workbook.ipynb)
 
 ## Start here
