@@ -1,5 +1,7 @@
 # RAG on Production: a two-hour Colab workshop
 
+**Printable workbooks:** [Session 1 and Session 2 PDFs in English, Japanese and Simplified Chinese](PDF-Workbooks/README.md). Author: Rajkumar Rajagobalan.
+
 Four hands-on labs for intermediate-to-expert Python programmers. Use OpenAI embeddings and generation to build a small evidence-grounded assistant, then test retrieval and guardrails.
 
 **Next session:** [Session 2 — Labs 5–8](Session-2/README.md) covers a RAG platform, AI agents, multimodal RAG and knowledge graphs, with English, Japanese and Simplified Chinese Colab workbooks and an instructor PowerPoint.

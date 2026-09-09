@@ -1,5 +1,7 @@
 # Session 2 · Four more RAG labs
 
+**Printable workbooks:** [Session 1 and Session 2 PDFs in English, Japanese and Simplified Chinese](../PDF-Workbooks/README.md). Author: Rajkumar Rajagobalan.
+
 **Two hours · Labs 5–8 · OpenAI API keys · CPU Colab · Intermediate/expert Python**
 
 Continue with a managed RAG platform, an AI agent, multimodal evidence and a knowledge graph. Each workbook includes concepts, 22 numbered steps, detailed Python explanations, observation tables, recovery and submission instructions. One notebook preserves state across the four labs; Session 1 need not be running.
